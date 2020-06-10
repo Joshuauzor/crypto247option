@@ -10,7 +10,7 @@ class Landing extends CI_Controller {
 
 	public function index()
 	{
-		$this->data['title'] = 'Baby Bitcoin Minning';
+        $this->data['title'] = '247smartoptions | Most reliable trade network';
 		$this->load->view('landing/index', $this->data);
 	}
 }

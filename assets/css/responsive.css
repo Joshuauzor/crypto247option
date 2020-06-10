@@ -7,17 +7,7 @@
                     medium
 ================+/+/+/+/+/+/+/+/+/=================
 */
-/*#btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-body{
-    overflow-x: hidden;
-}
-  #btn{
-        margin-left: 400px; margin-top: -40px;
-    }
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 
     .gradient-btn.apps-btn i {
@@ -351,19 +341,14 @@ body{
     .logo-area img {
         width: 80px;
         height: 25px;
-         margin-left:-40px;
     }
     a.gradient-btn {
         font-size: 6px;
-        padding: 20px;
-       
     }
-
     .welcome-text h1 {
         font-size: 14px;
         line-height: 20px;
     }
-
     .welcome-text h4 {
         font-size: 12px;
         margin-top: 20px;
@@ -420,14 +405,14 @@ body{
     }
     a.gradient-btn {
         font-size: 6px;
-        padding:  5px;
+        padding: 10px 5px;
     }
     .about-mid-img {
         width: 260px;
         top: -17%;
         margin: auto;
-            margin-bottom:0;
-      /*  margin-bottom: 30px;*/
+            margin-bottom: auto;
+        margin-bottom: 30px;
     }
     #days, 
     #minutes, 
@@ -744,20 +729,14 @@ body{
                     wid device
 ================+/+/+/+/+/+/+/+/+/=================
 */
-@media only screen and (min-width: 480px) and (max-width: 767px){
-    .video-bg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
     .single-footer input {
         width:70%;
     }
     a.gradient-btn {
-        padding: 10px;
+        padding: 10px 20px;
         font-size: 10px;
     }
     .faq-area .owl-nav .owl-prev {
@@ -838,9 +817,9 @@ body{
         font-size: 14px;
         margin: 0 10px
     }
-/*    a.gradient-btn {
-        margin-left: 80px;
-    }*/
+    a.gradient-btn {
+        padding: 10px;
+    }
     .gradient-btn.apps-btn.apps-btn-2 {
         margin-left: 10px;
     }
@@ -901,7 +880,6 @@ body{
     .single-comment {
         height: 400px;
     }
-  
 }
 
 /*=========================================================================
