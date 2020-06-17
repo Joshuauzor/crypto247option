@@ -32,7 +32,7 @@
                                         </span>
                                     </h6>
                                     <div class="d-flex d-sm-block d-lg-flex align-items-end mb-3">
-                                        <h3 class="mb-0 mr-2"><?= count($all_details) ?></h3>
+                                        <h3 class="mb-0 mr-2"><?= count($admin) ?></h3>
                                         <p class="small text-muted mb-0 line-height-20">
                                             <span class="text-danger">-1.2%</span> than last week
                                         </p>

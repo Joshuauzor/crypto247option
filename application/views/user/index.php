@@ -49,9 +49,13 @@
 
                     <!-- dashboard info -->
 
+                    <!-- <style>
+                        #work{
+                            display: flex;
+                        }
+                    </style> -->
 
-
-                    <div class="row">
+                    <div class="row" id="work">
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-body">

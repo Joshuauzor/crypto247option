@@ -18,9 +18,10 @@
             </li>
             <?php endif ?>
             <li>
-                <a href="#">
+                <a href="<?= base_url('client/home/live_trade') ?>">
                     <i class="nav-link-icon" data-feather="monitor"></i>
                     <span>Live trade</span>
+                    <span class="badge badge-success">2</span>
                 </a>
             </li>
             <li>

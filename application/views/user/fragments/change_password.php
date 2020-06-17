@@ -38,18 +38,10 @@
 
     <!-- logo -->
     <div id="logo">
-    <p id="head">247SMARTOPTIONS</p>
-            <style>
-                #head{
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family: sans-serif;
-                    color: #004deb;
-                }
-            </style>
-        <!-- <img class="logo" src="<?=base_url('assets/assets/media/image/logo.png')?>" alt="image">
-        <img class="logo-dark" src="<?=base_url('assets/assets/media/image/logo-dark.png')?>" alt="image"> -->
-    </div>
+   
+   <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="image">
+   <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="image">
+</div>
     <!-- ./ logo -->
     <?php if($this->session->flashdata('error')): ?>
         <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>

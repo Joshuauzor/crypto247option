@@ -24,7 +24,7 @@
 
             <div class="page-header">
                 <h4>Admin Dashboard</h4>
-                <small class="">Welcome, <span class="text-primary"><?= $this->session->btc_admin->firstname.' '.$this->session->btc_admin->lastname ?></span></small>
+                <small class="">Active, <span class="text-primary"><?= $this->session->btc_admin->firstname.' '.$this->session->btc_admin->lastname ?></span></small>
             </div>
 
             <div class="row">
@@ -145,28 +145,13 @@
                                                     </small>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Account type</label>
+                                        <label for="exampleInputPassword1">Action</label>
                                         <select class="form-control form-control-sm" name="account_type" required>
-                                            <option selected disabled>Select Account type</option>
+                                            <option selected disabled>Select Action</option>
                                             <option value="Mini">Mini</option>
                                             <option value="Medi">Medi</option>
                                             <option value="Max">Max</option>
                                         </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Invested</label>
-                                            <input type="text" name="invested" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Invested" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Balance</label>
-                                            <input type="text" name="balance" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Balance" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Withdrawal</label>
-                                            <input type="text" name="withdrawal" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Withdrawal" required>
                                     </div>
                                 
                                         <button type="submit" class="btn btn-primary">Update</button>
@@ -179,21 +164,10 @@
                         </div>
                     </div>
 
-                    <!-- modal ends -->
-
-                <!-- -------------------------------------------------------------------------------- -->
-
+                 
             </div>
         </div>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script>
-            //    $document.ready(function(){
-                   $("#btn").click(function(){
-                    //    $("#myModal").modal("show");
-                    alert('hello');
-                   })
-            //    })
-            </script> -->
+      
     </div>
     </div>
 

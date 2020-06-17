@@ -20,6 +20,14 @@ class Home extends CI_Controller{
         $this->load->view('user/index', $this->data);
     }
 
+    public function live_trade(){
+        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['transaction'] = $this->user_model->get_one($this->session->btc_user->id);
+
+        $this->load->view('user/fragments/live_trade', $this->data);
+
+    }
+
     // public function veriffy(){
     //     $this->data['title'] = '247smartoptions | Most reliable trade network';
     //     $this->data['transaction'] = $this->user_model->get_one($this->session->btc_user->id);

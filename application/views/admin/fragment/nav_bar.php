@@ -38,10 +38,10 @@
               </li>
         
               <li>
-                <a href="#">
+                <a href="<?= base_url('admin/home/reset_account')?>">
                     <i class="nav-link-icon" data-feather="copy"></i>
-                    <span>Update Client Account </span>
-                    <span class="badge badge-primary">2</span>
+                    <span>Delete Client Account </span>
+                    <span class="badge badge-danger">2</span>
                 </a>
             </li>
 

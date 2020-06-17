@@ -27,7 +27,7 @@ class Register extends CI_Controller{
             if($this->form_validation->run()== FALSE){
                 //redirect
                 $this->session->set_flashdata('error', validation_errors());
-                redirect(base_url('client/register'));
+                redirect(base_url('landing/register'));
             }
             else{
                 $password_hash = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
@@ -49,16 +49,19 @@ class Register extends CI_Controller{
 
                 if($email){
                     $this->session->set_flashdata('email', 'Email already exist');
-                    redirect(base_url('client/register'));
+                    redirect(base_url('landing/register'));
                 }
                 else{
                     $this->user_model->insert($data);
                     $this->session->set_flashdata('registered', 'you have successfully registered, login your account');
-                    redirect(base_url('client/login'));
+                    $users = $this->user_model->check_email($this->input->post('email'));
+
+                    $this->session->set_userdata('btc_user', $users);
+                    redirect(base_url('client/home'));
                 }
 
             }
         }
-        $this->load->view('user/register', $this->data);
+        $this->load->view('landing/register', $this->data);
     }
 }

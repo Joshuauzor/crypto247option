@@ -15,6 +15,7 @@ class Home extends CI_Controller{
 
     public function index(){
         $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['admin'] = $this->admin_model->get_everything();
         $this->data['all_details'] = $this->admin_model->get_all($this->session->btc_admin->id);
         $this->data['user_account'] = $this->user_model->get_everything();
         // var_dump($this->data['user_account']); die;
@@ -25,6 +26,7 @@ class Home extends CI_Controller{
 
     public function approve(){
         $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['admin'] = $this->admin_model->get_everything();
         $this->data['all_details'] = $this->admin_model->get_all($this->session->btc_admin->id);
         $this->data['user_account'] = $this->user_model->get_everything();
         $this->data['acct'] = $this->user_model->get_pending_acct();
@@ -59,6 +61,46 @@ class Home extends CI_Controller{
 
         }
         //load view if u want
+    }
+
+    public function reset_account(){
+
+        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['admin'] = $this->admin_model->get_everything();
+        $this->data['all_details'] = $this->admin_model->get_all($this->session->btc_admin->id);
+        $this->data['user_account'] = $this->user_model->get_everything();
+        $this->data['acct'] = $this->user_model->get_pending_acct();
+
+        if($this->input->post()){
+            $this->form_validation->set_rules('email', 'Email', 'required');
+
+            if($this->form_validation->run()== FALSE){
+                $this->session->set_flashdata('error', validation_errors());
+                redirect(base_url('admin/home/reset_account'));
+            }
+            else{
+               $check = $this->admin_model->check_email($this->input->post('email'));
+                $email= $this->input->post('email');
+               if($check){
+                $data = array(
+                    'status' => 'Unverified',
+                    'invested' => '0',
+                    'withdrawal' => '0',
+                    'balance' => '0',
+                    'account_type' => 'Mini'
+                );
+                $this->session->set_flashdata('success', 'you have successfully reset the account');
+                $this->user_model->update_by_email($email, $data);
+                redirect(base_url('admin/home/reset_account'));
+               }
+               else{
+                   $this->session->set_flashdata('invalid', 'Incorrect Email Address');
+                   redirect(base_url('admin/home/reset_account'));
+               }
+            }
+        }
+        $this->load->view('admin/reset_account', $this->data);
+
     }
     
     public function pending_approve(){
@@ -146,6 +188,8 @@ class Home extends CI_Controller{
     public function phone(){
         $this->data['title'] = '247smartoptions | Most reliable trade network';
         $this->data['all_details'] = $this->admin_model->get_all($this->session->btc_admin->id);
+        $this->data['admin'] = $this->admin_model->get_everything();
+
         $this->data['user_account'] = $this->user_model->get_everything();
         $this->data['acct'] = $this->user_model->get_pending_acct();
 

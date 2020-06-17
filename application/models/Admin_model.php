@@ -45,4 +45,8 @@ class Admin_model extends CI_Model{
         $this->db->where('id', $id);
          return $this->db->delete($this->table_name)->row();
     }
+
+    public function get_everything(){
+        return $this->db->get($this->table_name)->result();
+    }
 }

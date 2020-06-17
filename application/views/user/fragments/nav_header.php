@@ -5,19 +5,13 @@
     <!-- begin::logo -->
     <div id="logo">
         <a href="#">
-        <p id="head">247SMARTOPTIONS</p>
-            <style>
-                #head{
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family: 'Roboto', sans-serif;
-                    color: #004deb;
-                }
-            </style>
+        
+            <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="logo">
+            <img class="logo-sm" src="<?=base_url('img/artboard.png')?>" alt="small logo">
+            <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="dark logo">
         </a>
     </div>
     <!-- end::logo -->
-    <!-- <img src="assets/media/image/user/man_avatar3.jpg" class="rounded-circle" alt="image"> -->
     <!-- begin::navigation header -->
     <header class="navigation-header">
         <figure class="avatar avatar-state-success">

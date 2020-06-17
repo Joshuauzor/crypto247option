@@ -32,18 +32,10 @@
     <!-- begin::logo -->
     <div id="logo">
         <a href="#">
-            <p id="head">247SMARTOPTIONS</p>
-            <style>
-                #head{
-                    font-size: 20px;
-                    font-weight: bold;
-                    font-family: sans-serif;
-                    color: #004deb;
-                }
-            </style>
-            <!-- <img class="logo" src="<?=base_url('assets/assets/media/image/logo.png')?>" alt="logo">
-            <img class="logo-sm" src="<?=base_url('assets/assets/media/image/logo-sm.png')?>" alt="small logo">
-            <img class="logo-dark" src="<?=base_url('assets/assets/media/image/logo-dark.png')?>" alt="dark logo"> -->
+        
+            <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="logo">
+            <img class="logo-sm" src="<?=base_url('img/artboard.png')?>" alt="small logo">
+            <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="dark logo">
         </a>
     </div>
     <!-- end::logo -->

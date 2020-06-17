@@ -23,7 +23,7 @@ class Login extends CI_Controller{
             if($this->form_validation->run()== FALSE){
                 //ERROR
                 $this->session->set_flashdata('error', validation_errors());
-                redirect(base_url('client/login'));
+                redirect(base_url('landing/login'));
             }
             else{
                 //logic
@@ -36,18 +36,18 @@ class Login extends CI_Controller{
                     }
                     else{
                         $this->session->set_flashdata('incorrect', 'incorrect password');
-                        redirect(base_url('client/login'));
+                        redirect(base_url('landing/login'));
                     }
                 }
                 else{
                     $this->session->set_flashdata('account', 'Account does not exist');
-                    redirect(base_url('client/login'));
+                    redirect(base_url('landing/login'));
 
                 }
                 
             }
         }
-        $this->load->view('user/login', $this->data);
+        $this->load->view('landing/login', $this->data);
 
     }
 

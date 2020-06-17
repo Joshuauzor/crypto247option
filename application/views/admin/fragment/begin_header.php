@@ -14,15 +14,12 @@
 
     <!-- begin::header-logo -->
     <li class="nav-item" id="header-logo">
-    <p id="head">SMARTOPTIONS</p>
-            <style>
-                #head{
-                    font-size: 25px;
-                    font-weight: bold;
-                    font-family: sans-serif;
-                }
-            </style>
-    </li>
+                    <a href="<?= base_url()?>">
+                        <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="logo">
+                        <img class="logo-sm" src="<?=base_url('img/artboard.png')?>" alt="small logo">
+                        <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="dark logo">
+                    </a>
+                </li>
     <!-- end::header-logo -->
 </ul>
 <!-- end::header left -->
