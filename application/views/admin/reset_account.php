@@ -35,14 +35,14 @@
 
 <!-- begin::page-header -->
 <div class="page-header">
-    <h4>Reset Account</h4>
+    <h4>Delete Account</h4>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="#">Client</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="#">Reset</a>
+                <a href="#">Delete</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Account</li>
         </ol>
@@ -57,7 +57,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h6 class="card-title"> Reset Account</h6>
+                            <h6 class="card-title"> Delete Account</h6>
                             <form action="<?= base_url('admin/home/reset_account') ?>" method="POST">
                                 <div class="form-group">
                                    <?php if($this->session->flashdata('error')): ?>
@@ -71,7 +71,7 @@
                                    <div class="alert alert-danger"><?= $this->session->flashdata('invalid') ?> </div>
                                    <?php endif ?>
 
-                                <p>By reseting a client account you are setting the client account to unverified: This can be done to clear the approved account field for client no longer trading..</p>
+                                <p>By Deleting a client account, is totally disabling the client's account and they won't login with the account anymore..</p>
                                 </div>
                                 <div class="row">
                                 <div class="col-md-8">
@@ -90,7 +90,7 @@
  
 
 
-                                <button type="submit" class="btn btn-primary">Reset</button>
+                                <button type="submit" class="btn btn-primary">Delete</button>
                             </form>
 
                          
@@ -118,7 +118,7 @@
     <!-- begin::footer -->
     <footer>
         <div class="container">
-            <div>© <script> document.write( new Date().getFullYear()) </script>  247smartoptions Powered by <a href="https://web.facebook.com/Zealtechnologized/" target="_blank">Zeal Technologies</a></div>
+            <div>© <script> document.write( new Date().getFullYear()) </script>  Crypto247network Powered by <a href="https://web.facebook.com/Zealtechnologized/" target="_blank">Zeal Technologies</a></div>
            
         </div>
     </footer>

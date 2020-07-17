@@ -8,7 +8,7 @@
     <title><?= $title ?></title>
 
     <!-- Favicon -->
-    <link href="img/bit.png" rel="shortcut icon"/>
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/blog/favicon.png')?>">
     <!-- Plugin styles -->
     <link rel="stylesheet" href="<?=base_url('assets/vendors/bundle.css')?>" type="text/css">
 
@@ -22,8 +22,8 @@
     <!-- logo -->
     <div id="logo">
   
-        <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="image">
-        <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="image">
+        <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
+        <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
     </div>
     <!-- ./ logo -->
     <?php if($this->session->flashdata('error')): ?>

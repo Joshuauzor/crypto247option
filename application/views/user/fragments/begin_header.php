@@ -13,10 +13,10 @@
 
             <!-- begin::header-logo -->
             <li class="nav-item" id="header-logo">
-                    <a href="index-2.html">
-                        <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="logo">
-                        <img class="logo-sm" src="<?=base_url('img/artboard.png')?>" alt="small logo">
-                        <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="dark logo">
+                    <a href="<?= base_url('client/home')?>">
+                        <img class="logo" src="<?=base_url('assets/logo/Asset1.png')?>" alt="logo">
+                        <img class="logo-sm" src="<?=base_url('assets/logo/Asset1.png')?>" alt="small logo">
+                        <img class="logo-dark" src="<?=base_url('assets/logo/Asset1.png')?>" alt="dark logo">
                     </a>
                 </li>
             <!-- end::header-logo -->
@@ -44,28 +44,10 @@
                         </div>
                     </div>
                 </li>
-                <!-- end::search-form -->
-
-                <!-- begin::header minimize/maximize -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link" title="Fullscreen" data-toggle="fullscreen">
-                        <i class="maximize" data-feather="maximize"></i>
-                        <i class="minimize" data-feather="minimize"></i>
-                    </a>
-                </li>
               
-                <!-- end::header notification dropdown -->
             </ul>
 
-            <!-- begin::mobile header toggler -->
-            <ul class="navbar-nav d-flex align-items-center">
-                <li class="nav-item header-toggler">
-                    <a href="#" class="nav-link">
-                        <i data-feather="arrow-down"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- end::mobile header toggler -->
+          
         </div>
         <!-- end::header-right -->
     </div>

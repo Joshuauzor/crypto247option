@@ -47,11 +47,22 @@ class User_model extends CI_Model{
     }
     public function delete($id){
         $this->db->where('id', $id);
-        return $this->db->delete($this->table_name)->row();
+        return $this->db->delete($this->table_name);
     }
 
+    public function delete_by_email($email){
+        $this->db->where('email', $email);
+       return $this->db->delete($this->table_name);   
+   }
+   
     public function get_pending_acct(){
         $this->db->where('status', 'pending');
         return $this->db->get($this->table_name)->result();
+    }
+
+    public function check_email_phone($email, $phone){
+        $this->db->where('email', $email);
+        $this->db->where('phone', $phone);
+        return $this->db->get($this->table_name)->row();
     }
 }

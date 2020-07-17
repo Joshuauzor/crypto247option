@@ -56,6 +56,40 @@
                     </style> -->
 
                     <div class="row" id="work">
+                      
+                        <div class="col-md-4">
+                        <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Trading Bonus</h6>
+                                    <div class="text-center">
+                                        <div class="mb-2">
+                                            <!-- <span class="bar-1">2,5,9,6,5,2,4,3,7,5</span> -->
+                                        </div>
+                                        <div class="font-size-30 mb-1 font-weight-bold text-primary">$<?= $transaction->bonus; ?></div>
+                                        <p class="mb-0 text-muted">
+                                            <i class="fa fa-caret-up text-success m-r-5"></i> current
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Total Distribution</h6>
+                                    <div class="text-center">
+                                        <div class="mb-2">
+                                            <span class="bar-3">2,5,9,6,5,2,4,3,7,5</span>
+                                        </div>
+                                        <div class="font-size-30 mb-1 font-weight-bold text-primary">674k</div>
+                                        <p class="mb-0 text-muted">
+                                            <i class="fa fa-caret-up text-primary m-r-5"></i> 63% increase in Last week
+                                            week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-body">
@@ -63,64 +97,9 @@
                                     <h6 class="card-title d-flex justify-content-between">
                                    
                                         <iframe id="tradingview_8c5c7" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_8c5c7&amp;symbol=AAPL&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=0&amp;toolbarbg=f1f3f6&amp;studies=ROC%40tv-basicstudies%1FStochasticRSI%40tv-basicstudies%1FMASimple%40tv-basicstudies&amp;theme=Dark&amp;style=1&amp;timezone=exchange&amp;withdateranges=1&amp;showpopupbutton=1&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;showpopupbutton=1&amp;locale=en&amp;utm_source=www.autofxnetworks.online&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=AAPL" style="width: 100%; height: 600px; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
-                                        <!-- <span class="dropdown">
-                                            <a href="#" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false">
-                                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                                            </a>
-                                            <span class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </span>
-                                        </span> -->
+                                     
                                     </h6>
                                     <!-- <div id="chart1"></div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Flexibility</h6>
-                                    <div class="text-center">
-                                        <div class="mb-2">
-                                            <span class="bar-1">2,5,9,6,5,2,4,3,7,5</span>
-                                        </div>
-                                        <div class="font-size-30 mb-1 font-weight-bold text-primary">94%</div>
-                                        <p class="mb-0 text-muted">
-                                            <i class="fa fa-caret-up text-primary m-r-5"></i> 13% increase in Last week
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Total Connections</h6>
-                                    <div class="text-center">
-                                        <div class="mb-2">
-                                            <span class="bar-1">2,5,9,6,5,2,4,3,7,5</span>
-                                        </div>
-                                        <div class="font-size-30 mb-1 font-weight-bold text-primary">4k</div>
-                                        <p class="mb-0 text-muted">
-                                            <i class="fa fa-caret-up text-primary m-r-5"></i> 13% increase in Last week
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Total Connections</h6>
-                                    <div class="text-center">
-                                        <div class="mb-2">
-                                            <span class="bar-3">2,5,9,6,5,2,4,3,7,5</span>
-                                        </div>
-                                        <div class="font-size-30 mb-1 font-weight-bold text-success">674k</div>
-                                        <p class="mb-0 text-muted">
-                                            <i class="fa fa-caret-down text-danger m-r-5"></i> 63% increase in Last week
-                                            week
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -181,125 +160,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Users Assigned to Me</h6>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item d-flex align-items-center p-l-r-0">
-                                            <div>
-                                                <figure class="avatar avatar-state-success m-r-15">
-                                                    <img src="<?= base_url('assets/assets/media/image/user/man_avatar5.jpg')?>"
-                                                         class="rounded-circle" alt="image">
-                                                </figure>
-                                            </div>
-                                            <div>
-                                                <h6 class="m-b-0">Valentine Maton</h6>
-                                                <small class="text-muted">Engineer</small>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <span class="badge badge-danger mr-2 d-sm-inline d-none">Denied</span>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown"
-                                                       class="btn btn-outline-light btn-sm"
-                                                       aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#" class="dropdown-item">View</a>
-                                                        <a href="#" class="dropdown-item">Send Message</a>
-                                                        <a href="#" class="dropdown-item">Assign</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-center p-l-r-0">
-                                            <div>
-                                                <figure class="avatar avatar-state-success m-r-15">
-                                                    <img src="<?= base_url('assets/assets/media/image/user/women_avatar3.jpg')?>"
-                                                         class="rounded-circle" alt="image">
-                                                </figure>
-                                            </div>
-                                            <div>
-                                                <h6 class="m-b-0">Holmes Cherryman</h6>
-                                                <small class="text-muted">Human resources</small>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <span class="badge badge-success mr-2 d-sm-inline d-none">Completed</span>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown"
-                                                       class="btn btn-outline-light btn-sm"
-                                                       aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#" class="dropdown-item">View</a>
-                                                        <a href="#" class="dropdown-item">Send Message</a>
-                                                        <a href="#" class="dropdown-item">Assign</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-center p-l-r-0">
-                                            <div>
-                                                <figure class="avatar avatar-state-success m-r-15">
-                                                    <span class="avatar-title bg-secondary rounded-circle">MH</span>
-                                                </figure>
-                                            </div>
-                                            <div>
-                                                <h6 class="m-b-0">Malanie Hanvey</h6>
-                                                <small class="text-muted">Real estate agent</small>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <span class="badge badge-warning mr-2 d-sm-inline d-none">Pending</span>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown"
-                                                       class="btn btn-outline-light btn-sm"
-                                                       aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#" class="dropdown-item">View</a>
-                                                        <a href="#" class="dropdown-item">Send Message</a>
-                                                        <a href="#" class="dropdown-item">Assign</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-center p-l-r-0">
-                                            <div>
-                                                <figure class="avatar avatar-state-success m-r-15">
-                                                    <img src="<?= base_url('assets/assets/media/image/user/women_avatar1.jpg')?>"
-                                                         class="rounded-circle" alt="image">
-                                                </figure>
-                                            </div>
-                                            <div>
-                                                <h6 class="m-b-0">Kenneth Hune</h6>
-                                                <small class="text-muted">Engineer</small>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <span class="badge badge-danger mr-2 d-sm-inline d-none">Denied</span>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown"
-                                                       class="btn btn-outline-light btn-sm"
-                                                       aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#" class="dropdown-item">View</a>
-                                                        <a href="#" class="dropdown-item">Send Message</a>
-                                                        <a href="#" class="dropdown-item">Assign</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="mt-3 text-center">
-                                        <a href="#">
-                                            View All
-                                        </a>
-                                    </div>
-                                </div>
-                            </div> -->
+                      
                         </div>
                         <div class="col-xl-6 col-md-12">
                             <div class="card">

@@ -25,9 +25,9 @@
                 </a>
             </li>
             <li>
-                <a href="<?= base_url('client/home/fund_account') ?>">
+                <a href="<?= base_url('client/home/deposit') ?>">
                     <i class="nav-link-icon" data-feather="send"></i>
-                    <span>Fund account</span>
+                    <span>Deposit</span>
                     <span class="badge badge-success">2</span>
                 </a>
             </li>
@@ -129,7 +129,7 @@
                 </a>
                 <ul>
                     <li><a href="<?= base_url('client/home/change_email') ?>">Change Email</a></li>
-                    <li><a href="<?= base_url('client/home/phone') ?>">Change Mobile No</a></li>
+                    <!-- <li><a href="<?= base_url('client/home/phone') ?>">Change Mobile No</a></li> -->
                     <li><a href="<?= base_url('client/login/change_password') ?>">Change Password</a></li>
                     <li><a href="<?= base_url('client/home/logout') ?>">Log Out</a></li>
                 </ul>

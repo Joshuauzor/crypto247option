@@ -11,7 +11,7 @@ class Register extends CI_Controller{
     }
 
     public function index(){
-        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['title'] = 'Crypto247network | Most reliable trade network';
 
          if($this->input->post()){
             //validate
@@ -20,6 +20,7 @@ class Register extends CI_Controller{
             $this->form_validation->set_rules('email','Email', 'required');
             $this->form_validation->set_rules('phone','Mobile No', 'required');
             $this->form_validation->set_rules('country','Country', 'required');
+            $this->form_validation->set_rules('currency','Currency', 'required');
             $this->form_validation->set_rules('password','Password', 'required');
             $this->form_validation->set_rules('password','Password', 'required');
             $this->form_validation->set_rules('confirm_pass','Confirm Password', 'required|matches[password]');
@@ -27,7 +28,7 @@ class Register extends CI_Controller{
             if($this->form_validation->run()== FALSE){
                 //redirect
                 $this->session->set_flashdata('error', validation_errors());
-                redirect(base_url('landing/register'));
+                redirect(base_url('client/register'));
             }
             else{
                 $password_hash = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
@@ -38,10 +39,13 @@ class Register extends CI_Controller{
                     'email' => $_POST['email'],
                     'phone' => $_POST['phone'],
                     'country' => $_POST['country'],
+                    'currency' => $_POST['currency'],
                     'password' => $password_hash,
                     'invested' => '0',
                     'balance' => '0',
                     'withdrawal' => '0',
+                    'status' => 'Unverified',
+                    'bonus' => '0'
 
                 );
 
@@ -49,11 +53,11 @@ class Register extends CI_Controller{
 
                 if($email){
                     $this->session->set_flashdata('email', 'Email already exist');
-                    redirect(base_url('landing/register'));
+                    redirect(base_url('client/register'));
                 }
                 else{
                     $this->user_model->insert($data);
-                    $this->session->set_flashdata('registered', 'you have successfully registered, login your account');
+                    // $this->session->set_flashdata('registered', 'you have successfully registered, login your account');
                     $users = $this->user_model->check_email($this->input->post('email'));
 
                     $this->session->set_userdata('btc_user', $users);

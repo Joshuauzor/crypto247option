@@ -43,7 +43,14 @@
                     <span>Delete Client Account </span>
                     <span class="badge badge-danger">2</span>
                 </a>
-            </li>
+                </li>
+                <li>
+                <a href="<?= base_url('admin/home/wallet')?>">
+                    <i class="nav-link-icon" data-feather="mail"></i>
+                    <span>Wallet </span>
+                    <span class="badge badge-success">2</span>
+                </a>
+                </li>
 
             <li class="navigation-divider">Extras</li>
             <li>

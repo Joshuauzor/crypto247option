@@ -8,7 +8,7 @@
     <title><?= $title ?></title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?=base_url('assets/assets/media/image/favicon.png')?>"/>
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/blog/favicon.png')?>">
 
     <!-- Plugin styles -->
     <link rel="stylesheet" href="<?=base_url('assets/vendors/bundle.css')?>" type="text/css">
@@ -24,8 +24,8 @@
     <!-- logo -->
     <div id="logo">
    
-   <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="image">
-   <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="image">
+   <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
+   <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
 </div>
     <!-- ./ logo -->
     <?php if($this->session->flashdata('error')): ?>
@@ -53,9 +53,9 @@
             <input type="password" class="form-control" name="password" placeholder="Password" required>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" name="email" placeholder="New Email Address" required autofocus>
+            <input type="email" class="form-control" name="email" placeholder="New Email Address" required autofocus>
         </div>
-        <button class="btn btn-primary btn-block">Change Email</button>
+        <button class="btn btn-primary btn-block">Update</button>
         <!-- <div id="text">
             <p>By logging means that you agree with terms and conditions and our privacy policy including our cookie. We keep your data secured.</p>
         </div> -->

@@ -80,7 +80,7 @@
                             <th>Invested</th>
                             <th>Balance</th>
                             <th>Withdrawal</th>
-                            <th>Account</th>
+                            <th>Trading Bonus</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -98,7 +98,7 @@
                             <td><?= $acct->invested ?></td>
                             <td><?= $acct->balance ?></td>
                             <td><?= $acct->withdrawal ?></td>
-                            <td><button type="button" id="btn" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-rounded">Delete</button>
+                            <td><?= $acct->bonus ?>
                             </td>
                         </tr>
                         <!-- <button type="button" id="btn" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-rounded">Account</button> -->
@@ -117,7 +117,7 @@
                             <th>Invested</th>
                             <th>Balance</th>
                             <th>Withdrawal</th>
-                            <th>Account</th>
+                            <th>Trading Bonus</th>
                         </tr>
                         </tfoot>
                     </table>
@@ -168,6 +168,11 @@
                                             <input type="text" name="withdrawal" class="form-control" id="exampleInputPassword1"
                                                 placeholder="Withdrawal" required>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Trading Bonus</label>
+                                            <input type="text" name="bonus" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Trading Bonus" required>
+                                    </div>
                                 
                                         <button type="submit" class="btn btn-primary">Update</button>
                                 </form>
@@ -212,7 +217,7 @@
     <!-- begin::footer -->
     <footer>
         <div class="container">
-            <div>© <script> document.write( new Date().getFullYear()) </script>  247smartoptions Powered by <a href="https://web.facebook.com/Zealtechnologized/" target="_blank">Zeal Technologies</a></div>
+            <div>© <script> document.write( new Date().getFullYear()) </script>  Crypto247network Powered by <a href="https://web.facebook.com/Zealtechnologized/" target="_blank">Zeal Technologies</a></div>
            
         </div>
     </footer>

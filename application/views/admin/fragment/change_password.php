@@ -24,8 +24,8 @@
     <!-- logo -->
     <div id="logo">
    
-    <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="image">
-        <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="image">
+    <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
+        <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
     </div>
     <!-- ./ logo -->
     <?php if($this->session->flashdata('error')): ?>
@@ -62,7 +62,7 @@
         <div class="form-group">
             <input type="password" class="form-control" name="confirm_pass" placeholder="Confirm Password" required>
         </div>
-        <button class="btn btn-primary btn-block">Change Password</button>
+        <button class="btn btn-primary btn-block">Update</button>
         <!-- <div id="text">
             <p>By logging means that you agree with terms and conditions and our privacy policy including our cookie. We keep your data secured.</p>
         </div> -->
@@ -86,7 +86,7 @@
             </li>
         </ul>
         <hr>
-        <p class="text-muted">Remember password?</p>
+        <!-- <p class="text-muted">Remember password?</p> -->
         <a href="<?= base_url('#') ?>" class="btn btn-outline-light btn-sm"> Return!</a>
     </form>
     <!-- ./ form -->

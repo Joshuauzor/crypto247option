@@ -1,4 +1,41 @@
-<?php $this->load->view('admin/fragment/header') ?>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><?= $title ?></title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/blog/favicon.png')?>">
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="<?= base_url('assets/vendors/bundle.css')?>" type="text/css">
+
+    <!-- DataTable -->
+    <link rel="stylesheet" href="<?= base_url('assets/vendors/dataTable/dataTables.min.css')?>" type="text/css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="<?= base_url('assets/vendors/prism/prism.css')?>" type="text/css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="<?= base_url('assets/assets/css/app.min.css')?>" type="text/css">
+</head>
+<body>
+<!-- begin::navigation -->
+<div class="navigation">
+
+    <!-- begin::logo -->
+    <div id="logo">
+        <a href="#">
+        
+            <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="logo" style="margin-top: 7%;">
+            <img class="logo-sm" src="<?=base_url('assets/logo/Asset2.png')?>" alt="small logo"  style="margin-top: 7%;">
+            <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="dark logo"  style="margin-top: 7%;">
+        </a>
+    </div>
+    <!-- end::logo -->
 
 <?php $this->load->view('admin/fragment/nav_header') ?>
 
@@ -21,7 +58,9 @@
 
         <!-- begin::container -->
         <div class="container">
-
+            <?php if($this->session->flashdata('success')): ?>
+                <div class="alert alert-success"> <?= $this->session->flashdata('success') ?> </div>
+            <?php endif ?>
             <div class="page-header">
                 <h4>Admin Dashboard</h4>
                 <small class="">Welcome, <span class="text-primary"><?= $this->session->btc_admin->firstname.' '.$this->session->btc_admin->lastname ?></span></small>
@@ -64,68 +103,61 @@
 </div>
 <!-- end::page-header -->
 
-    <div class="row">
-    <div class="col-md-12">
+ 
+<div class="row">
+                <div class="col-md-12">
 
-        <div class="card">
-            <div class="card-body">
-                <h6 class="card-title">Pending account</h6>
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Country</th>
-                            <th>Document</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php $i= 0;
-                        foreach($user_account as $acct):
-                        ?>
-                        <?php if($acct->status == 'Pending'): $i++; ?>
-                        <tr>
-                            <td><?=$i?></td>
-                            <td><?=$acct->firstname.' '.$acct->lastname?></td>
-                            <td><?= $acct->email ?></td>
-                            <td><?= $acct->phone ?></td>
-                            <td><?= $acct->country ?></td>
-                            <td><img id ="imga" src="<?= base_url("assets/document/" . $acct->front_page )  ?>" ></td> 
-                        </tr>
-                        <?php endif ?>
-                        <?php endforeach ?>
-                        </tbody>
-                        <tfoot>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Country</th>
-                            <th>Document</th>
-                    
-                        </tr>
-                        </tfoot>
-                    </table>
-                    <style>
-                        #imga{
-                            width: 30%;
-                        }
-                        @media only screen and (max-width: 600px){
-                            #imga{
-                            width: 70%;
-                        }  
-                        }
-                    </style>
+                 <?php $i=0;
+                 foreach($acct as $pending): $i++;?>
+                    <div class="card">
+                        <div class="card-body">
+                            <table id="example1" class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Country</th>
+                                    <th>Document Type</th>
+                                    <th>Document</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- body section -->
+                           
+                                <tr>
+                                    <!-- <td><?= $i ?></td> -->
+                                    <td><?= $pending->firstname.' '.$pending->lastname ?></td>
+                                    <td><?= $pending->email ?></td>
+                                    <td><?= $pending->phone ?></td>
+                                    <td><?= $pending->country ?></td>
+                                    <td><?= $pending->document_name ?></td>
+                                    <td><img id ="imga" src="<?= base_url("assets/document/" . $pending->front_page )  ?>" ></td>
+                                </tr>
+                               
+                            <!-- foot section -->
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Country</th>
+                                    <th>Document</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                          
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <!--  -->
+                    </div>
+                <?php endforeach ?>
                 </div>
             </div>
-        </div>
-
-    </div>
-    </div>
  <!-- bootstrap modal -->
 
  <div class="modal" id="myModal" tabindex="-1" role="dialog">
@@ -143,14 +175,14 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
                                             <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="Enter email" required>
+                                                aria-describedby="emailHelp" placeholder="Enter verification email" required>
                                                     <small id="emailHelp" class="form-text text-muted">Remember to use client email to get the exact client
                                                     </small>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Account Status</label>
                                         <select class="form-control form-control-sm" name="status" required>
-                                            <option selected disabled>Verify Account</option>
+                                            <option selected disabled>Select Status</option>
                                             <option value="Verified">Verified</option>
                                             <option value="Unverified">Unverified</option>
                                         </select>
@@ -200,47 +232,34 @@
     </div>
     <!-- end::main-content -->
 
-    <!-- begin::footer -->
-    <footer>
-        <div class="container">
-            <div>© <script> document.write( new Date().getFullYear()) </script>  247smartoptions Powered by <a href="https://web.facebook.com/Zealtechnologized/" target="_blank">Zeal Technologies</a></div>
-           
-        </div>
-    </footer>
-    <!-- end::footer -->
+  <!-- begin::footer -->
+  <footer>
+            <div class="container">
+            <div>© <script> document.write( new Date().getFullYear()) </script>  Crypto247network Powered by <a href="https://web.facebook.com/Zealtechnologized/" target="_blank">Zeal Technologies</a></div>
+            </div>
+        </footer>
+        <!-- end::footer -->
 
-</div>
-<!-- end::main -->
+    </div>
+    <!-- end::main -->
 
 <!-- Plugin scripts -->
-<script src="<?=base_url('assets/vendors/bundle.js')?>"></script>
+<script src="<?= base_url('assets/vendors/bundle.js')?>"></script>
 
-<!-- Chartjs -->
+<!-- DataTable -->
+<script src="<?= base_url('assets/vendors/dataTable/jquery.dataTables.min.js')?>"></script>
+<script src="<?= base_url('assets/vendors/dataTable/dataTables.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets/vendors/dataTable/dataTables.responsive.min.js')?>"></script>
+<script src="<?= base_url('assets/assets/js/examples/datatable.js')?>"></script>
+
+<!-- Prism -->
+<script src="<?= base_url('assets/vendors/prism/prism.js')?>"></script>
+
+<!-- test -->
 <script src="<?=base_url('assets/vendors/charts/chartjs/chart.min.js')?>"></script>
 
-<!-- Apex chart -->
-<script src="<?=base_url('assets/vendors/charts/apex/apexcharts.min.js')?>"></script>
-
-<!-- Circle progress -->
-<script src="<?=base_url('assets/vendors/circle-progress/circle-progress.min.js')?>"></script>
-
-<!-- Peity -->
-<script src="vendors/charts/peity/jquery.peity.min.js"></script>
-<script src="<?=base_url('assets/assets/js/examples/charts/peity.js')?>"></script>
-
-<!-- Datepicker -->
-<script src="<?=base_url('assets/vendors/datepicker/daterangepicker.js')?>"></script>
-
-<!-- Slick -->
-<script src="<?=base_url('assets/vendors/slick/slick.min.js')?>"></script>
-
-<!-- Vamp -->
-<script src="<?=base_url('assets/vendors/vmap/jquery.vmap.min.js')?>"></script>
-<script src="<?=base_url('assets/vendors/vmap/maps/jquery.vmap.usa.js')?>"></script>
-<script src="<?=base_url('assets/assets/js/examples/vmap.js')?>"></script>
-
-<!-- Dashboard scripts -->
 <script src="<?=base_url('assets/assets/js/examples/dashboard.js')?>"></script>
+
 <div class="colors"> <!-- To use theme colors with Javascript -->
     <div class="bg-primary"></div>
     <div class="bg-primary-bright"></div>
@@ -255,9 +274,10 @@
     <div class="bg-warning"></div>
     <div class="bg-warning-bright"></div>
 </div>
-
+<!-- test -->
 <!-- App scripts -->
-<script src="<?=base_url('assets/assets/js/app.min.js')?>"></script>
+<script src="<?= base_url('assets/assets/js/app.min.js')?>"></script>
 </body>
 
 </html>
+

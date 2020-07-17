@@ -11,7 +11,7 @@ class Login extends CI_Controller{
     }
 
     public function index(){
-        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['title'] = 'Crypto247network | Most reliable trade network';
         if($this->input->post()){
             $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required');

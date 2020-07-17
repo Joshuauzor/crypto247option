@@ -8,7 +8,7 @@
             <p class="text-muted">Administrator</p>
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="profile.html" class="btn nav-link bg-info-bright" title="Profile" data-toggle="tooltip">
+                    <a href="<?= base_url('admin/home/profile')?>" class="btn nav-link bg-info-bright" title="Profile" data-toggle="tooltip">
                         <i data-feather="user"></i>
                     </a>
                 </li>

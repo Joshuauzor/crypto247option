@@ -1,0 +1,83 @@
+/* (1366x768) WXGA Display */
+@media  screen and (max-width: 1366px) {
+
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {
+.feature-list ul li {
+  font-size: 13px;
+}
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.ptb-100 {
+    padding: 50px 0 100px;
+}
+.feature-list ul li {
+  font-size: 10px;
+}
+.hero-wrapper{
+	margin-top:0px;
+}
+}
+
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container{width:300px}
+.ptb-100 {
+  padding: 50px 0 100px;
+}
+.feature-list ul li {
+  font-size: 10px;
+  line-height: 26px;
+  width: 100%;
+}
+.section-title h1 {
+  font-size: 24px;
+}
+.hero-content h3 {
+  font-size: 20px;
+  line-height: 35px;
+}
+.demo-title {
+  margin-bottom: 40px;
+  padding: 20px 67px;
+  font-size: 15px;
+}
+.demo-title::before, .demo-title::after {
+  border-width: 31px;
+}
+.hero-wrapper{
+	margin-top:0px;
+}
+.hero-content p {
+    font-size: 14px;
+}
+.hero-content p span {
+	margin: 0 6px;
+}
+.title {
+	font-size: 18px;
+}
+}
+
+
+
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+.container {width:380px;}
+
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px;}
+
+}
+ 

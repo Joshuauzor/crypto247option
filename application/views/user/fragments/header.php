@@ -8,7 +8,7 @@
     <title><?= $title ?></title>
 
     <!-- Favicon -->
-    <link href="img/bit.png" rel="shortcut icon"/>
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/blog/favicon.png')?>">
     <!-- Plugin styles -->
     <link rel="stylesheet" href="<?= base_url('assets/vendors/bundle.css')?>" type="text/css">
 

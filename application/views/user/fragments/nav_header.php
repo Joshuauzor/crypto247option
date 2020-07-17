@@ -6,9 +6,9 @@
     <div id="logo">
         <a href="#">
         
-            <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="logo">
-            <img class="logo-sm" src="<?=base_url('img/artboard.png')?>" alt="small logo">
-            <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="dark logo">
+            <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="logo" style="margin-top: 7%;">
+            <img class="logo-sm" src="<?=base_url('assets/logo/Asset2.png')?>" alt="small logo" style="margin-top: 7%;">
+            <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="dark logo" style="margin-top: 7%;">
         </a>
     </div>
     <!-- end::logo -->

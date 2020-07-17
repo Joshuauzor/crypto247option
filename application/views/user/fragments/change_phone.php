@@ -8,7 +8,7 @@
     <title><?= $title ?></title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?=base_url('assets/assets/media/image/favicon.png')?>"/>
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/blog/favicon.png')?>">
 
     <!-- Plugin styles -->
     <link rel="stylesheet" href="<?=base_url('assets/vendors/bundle.css')?>" type="text/css">
@@ -24,8 +24,8 @@
     <!-- logo -->
     <div id="logo">
    
-        <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="image">
-        <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="image">
+        <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
+        <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="image">
     </div>
     <!-- ./ logo -->
     <?php if($this->session->flashdata('error')): ?>
@@ -69,7 +69,7 @@
             <input type="text" class="form-control" name="phone" placeholder="Phone" required autofocus>
         </div>
         
-        <button class="btn btn-primary btn-block">Change Password</button>
+        <button class="btn btn-primary btn-block">Update</button>
         <!-- <div id="text">
             <p>By logging means that you agree with terms and conditions and our privacy policy including our cookie. We keep your data secured.</p>
         </div> -->
@@ -93,7 +93,7 @@
             </li>
         </ul>
         <hr>
-        <p class="text-muted">Remember password?</p>
+        <!-- <p class="text-muted">Remember password?</p> -->
         <a href="<?= base_url('#') ?>" class="btn btn-outline-light btn-sm"> Return!</a>
     </form>
     <!-- ./ form -->

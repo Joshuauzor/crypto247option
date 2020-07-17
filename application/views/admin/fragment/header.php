@@ -8,7 +8,7 @@
     <title><?= $title ?></title>
 
     <!-- Favicon -->
-    <link href="img/bit.png" rel="shortcut icon"/>
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/blog/favicon.png')?>">
     <!-- Plugin styles -->
     <link rel="stylesheet" href="<?=base_url('assets/vendors/bundle.css')?>" type="text/css">
 
@@ -33,9 +33,9 @@
     <div id="logo">
         <a href="#">
         
-            <img class="logo" src="<?=base_url('img/artboard.png')?>" alt="logo">
-            <img class="logo-sm" src="<?=base_url('img/artboard.png')?>" alt="small logo">
-            <img class="logo-dark" src="<?=base_url('img/artboard.png')?>" alt="dark logo">
+            <img class="logo" src="<?=base_url('assets/logo/Asset2.png')?>" alt="logo"  style="margin-top: 7%;">
+            <img class="logo-sm" src="<?=base_url('assets/logo/Asset2.png')?>" alt="small logo"  style="margin-top: 7%;">
+            <img class="logo-dark" src="<?=base_url('assets/logo/Asset2.png')?>" alt="dark logo"  style="margin-top: 7%;">
         </a>
     </div>
     <!-- end::logo -->

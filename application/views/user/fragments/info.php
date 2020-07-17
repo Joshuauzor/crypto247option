@@ -78,7 +78,7 @@
                                     <div class="text-center">
                                         <div class="font-size-30 mb-1 font-weight-bold text-primary"><?= $transaction->account_type; ?></div>
                                         <p class="mb-0 text-muted">
-                                            <i class="fa fa-caret-down text-danger m-r-5"></i>active
+                                            <i class="fa fa-caret-up text-success m-r-5"></i>active
                                         </p>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                     <div class="text-center">
                                         <div class="font-size-30 mb-1 font-weight-bold text-primary">$<?= $transaction->withdrawal; ?></div>
                                         <p class="mb-0 text-muted">
-                                            <i class="fa fa-caret-up text-primary m-r-5"></i> Withdrawals
+                                            <i class="fa fa-caret-down text-primary m-r-5"></i> Withdrawals
                                         </p>
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
                                     <div class="text-center">
                                         <div class="font-size-30 mb-1 font-weight-bold text-primary">468k</div>
                                         <p class="mb-0 text-muted">
-                                            <i class="fa fa-caret-up text-primary m-r-5"></i> 53% increase in Last week
+                                            <i class="fa fa-caret-up text-primary m-r-5"></i> 53% increase
                                         </p>
                                     </div>
                                 </div>

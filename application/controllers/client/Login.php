@@ -11,7 +11,7 @@ class Login extends CI_Controller{
     }
 
     public function index(){
-        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['title'] = 'Crypto247network | Most reliable trade network';
         
         // $this->load->view('user/login', $this->data);
 
@@ -23,7 +23,7 @@ class Login extends CI_Controller{
             if($this->form_validation->run()== FALSE){
                 //ERROR
                 $this->session->set_flashdata('error', validation_errors());
-                redirect(base_url('landing/login'));
+                redirect(base_url('client/login'));
             }
             else{
                 //logic
@@ -35,13 +35,13 @@ class Login extends CI_Controller{
                         redirect(base_url('client/home'));
                     }
                     else{
-                        $this->session->set_flashdata('incorrect', 'incorrect password');
-                        redirect(base_url('landing/login'));
+                        $this->session->set_flashdata('incorrect', 'incorrect email or password');
+                        redirect(base_url('client/login'));
                     }
                 }
                 else{
-                    $this->session->set_flashdata('account', 'Account does not exist');
-                    redirect(base_url('landing/login'));
+                    $this->session->set_flashdata('account', 'incorrect email or password');
+                    redirect(base_url('client/login'));
 
                 }
                 
@@ -51,8 +51,45 @@ class Login extends CI_Controller{
 
     }
 
+    public function recover(){
+        $this->data['title'] = 'Crypto247network | Most reliable trade network';
+        if($this->input->post()){
+            $this->form_validation->set_rules('email', 'Email Address', 'required');
+            $this->form_validation->set_rules('phone', 'Mobile Number', 'required');
+            $this->form_validation->set_rules('password', 'New Password', 'required');
+            $this->form_validation->set_rules('confirm_pass', 'Confirm Password', 'required|matches[password]');
+
+            if($this->form_validation->run()== FALSE){
+                $this->session->set_flashdata('error', validation_errors());
+                redirect(base_url('client/login/recover'));
+            }
+            else{
+               $check = $this->user_model->check_email_phone($this->input->post('email'), $this->input->post('phone'));
+
+               if($check){
+                   $hide = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+                    $data = array(
+                        'password' => $hide
+                    );
+                    $this->user_model->update_by_email($this->input->post('email'), $data);
+                    $this->session->set_userdata('btc_user', $check);
+                    redirect(base_url('client/home'));
+                    $this->session->set_flashdata('success', 'Account recovered successfully!');
+
+               }
+               else{
+                   $this->session->set_flashdata('error', 'Incorrect recovery details!');
+                   redirect(base_url('client/login/recover'));
+
+               }
+            }
+        }
+
+        $this->load->view('landing/recover', $this->data);
+    }
+
     public function change_password(){
-        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['title'] = 'Crypto247network | Most reliable trade network';
         if($this->input->post()){
             $this->form_validation->set_rules('email', 'Email Address', 'required');
             $this->form_validation->set_rules('phone', 'Phone', 'required');

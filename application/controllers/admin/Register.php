@@ -15,7 +15,7 @@ class Register extends CI_Controller{
     }
 
     public function index(){
-        $this->data['title'] = '247smartoptions | Most reliable trade network';
+        $this->data['title'] = 'Crypto247network | Most reliable trade network';
 
          if($this->input->post()){
             //validate

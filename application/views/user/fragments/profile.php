@@ -19,7 +19,7 @@
     <div class="main-content">
 
         <div class="container">
-        <?php $this->load->view('user/fragments/info'); ?>
+        <!-- <php $this->load->view('user/fragments/info'); ?> -->
 
             <!-- begin::page-header -->
             <div class="page-header">
@@ -67,35 +67,103 @@
                                 <div class="col-6"><?= $this->session->btc_user->lastname ?></div>
                             </div>
                             <div class="row mb-2">
-                                <div class="col-6 text-muted">Email:</div>
-                                <div class="col-6"><?= $this->session->btc_user->email ?></div>
+                                <div class="col-6 text-muted">Mobile:</div>
+                                <div class="col-6"><?= $this->session->btc_user->phone ?></div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-6 text-muted">Country:</div>
                                 <div class="col-6"><?= $this->session->btc_user->country ?></div>
                             </div>
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-6 text-muted">Phone:</div>
                                 <div class="col-6"><?= $this->session->btc_user->phone ?></div>
-                            </div>
+                            </div> -->
                             <div class="row mb-2">
                                 <div class="col-6 text-muted">Trade Currency</div>
-                                <div class="col-6">$</div>
+                                <div class="col-6"><?= $this->session->btc_user->currency ?></div>
                             </div>
                         </div>
                     </div>
 
-                   
+                    <div class="col-md-8">
+        </div>
 
 
                 </div>
                 <div class="col-md-8">
-
-
-
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel">
                             
+                            <div class="card">
+                                <div class="card-body">
+                                <form action="<?= base_url('client/home/edit_profile') ?>"  method="POST">
+                                    <?php if($this->session->flashdata('email')): ?>
+                                                    <div class="alert alert-danger"><?= $this->session->flashdata('email') ?></div>
+                                                <?php endif ?>
+                                                <?php if($this->session->flashdata('success')): ?>
+                                                    <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+                                                <?php endif ?>
+                                                <?php if($this->session->flashdata('error')): ?>
+                                                    <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+                                                <?php endif ?>
+                                        <div class="text-right">
+                                            <ul class="list-inline">
+                                            
+                                            <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="firstname" class="form-control" id="inputEmail3" value="<?= $this->session->btc_user->firstname ?>" required> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Last Name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="lastname" class="form-control" id="inputEmail3" value="<?= $this->session->btc_user->lastname ?>" required> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="phone" class="form-control" id="inputEmail3" value="<?= $this->session->btc_user->phone ?>" required> 
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Country</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="reg_no" class="form-control" id="inputEmail3" value="<?= $this->session->btc_user->country ?>" required> 
+                                                    </div>
+                                                </div> -->
+                                            
+                                            
+                                                
+                                                <!-- <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="number" name="phone" class="form-control" id="inputEmail3" value="<?= $this->session->btc_user->phone ?>" required> 
+                                                    </div>
+                                                </div> -->
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                    <input class="form-control" type="text" placeholder="Input of wrong password will automatically log you out" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" name="password" class="form-control" id="inputEmail3" placeholder="Current Password" required> 
+                                                    </div>
+                                                </div>
+                                                <li class="list-inline-item">
+                                                    <button class="btn btn-primary">Submit</button>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <input type="reset" class="btn btn-secondary">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div class="card">
                                 <div class="card-body">
                                    

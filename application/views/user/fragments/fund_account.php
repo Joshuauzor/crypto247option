@@ -23,16 +23,16 @@
 
             <!-- begin::page-header -->
             <div class="page-header">
-                <h4>Fund Account</h4>
+                <h4>Deposit</h4>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="#">Client</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#">Fund</a>
+                            <a href="#">Account</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Account</li>
+                        <li class="breadcrumb-item active" aria-current="page">Deposit</li>
                     </ol>
                 </nav>
 
@@ -52,7 +52,7 @@
 
                 <div class="card">
                         <div class="card-body">
-                            <h6 class="card-title">Fund Account</h6>
+                            <h6 class="card-title">Deposit</h6>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
@@ -62,8 +62,11 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <div data-label="Note:" class="demo-code-preview">
+                              <b>Deposit should be made to the wallet address provided below.</b><br>
+                              </div>
                                     <tr>
-                                        <th scope="row">Kindly contact the live chat support to be properly guided
+                                        <th scope="row"><?=$wallet->address ?>
                                         </th>
                                     </tr>
                                     </tbody>
